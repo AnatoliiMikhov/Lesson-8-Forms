@@ -1,6 +1,78 @@
-
+/*--------
+--------Style file CSS
+--------*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 * {
     box-sizing: border-box;
 }
+
+body {
+    padding: 30px auto;
+    font-size: 12px;
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+h1 {
+    color: rgb(60, 55, 55);
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*-----
+-----Style for FORM
+-----*/
+
+
+form {
+    width: 20%;
+    margin: 50px auto;
+}
+
+legend {
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
+.inline-line {
+    display: inline-block;
+}
+
+input {
+    padding: 2px 5px;
+}
+
+select {
+    margin-bottom: 10px; 
+}
+
+input[type="checkbox"] {
+    
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
