@@ -1,0 +1,113 @@
+/*Custom style for form element*/
+fieldset {
+    border: none;
+}
+
+
+select,
+input,
+textarea {
+    outline: none;
+}
+
+input:hover {
+    background: #f4fcc7;
+    box-shadow: 1px 2px #ccc;
+    outline: none;
+}
+
+input:focus {
+    background: #defac6;
+    color: #fff;
+    box-shadow: 2px 2px #ccc;
+}
+
+input[type="submit"] {
+    background: #0c8123;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgba(54, 175, 38, 0.5);
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background: #23036a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px rgba(54, 175, 38, 0.5);
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #ba0d06;
+    box-shadow: 5px 5px rgba(175, 38, 59, 0.5), -5px -5px rgba(160, 20, 20, 0.7);
+}
+
+
+/*При помощи хака https://github.com/acidcrash2005/custom_radio_checkbox, создайте кастомные чекбоксы и радиокнопки.*/
+
+.checkbox,
+.radio {
+    position: relative;
+}
+
+.checkbox input,
+.radio input {
+    position: absolute;
+    left: -9999em;
+    /*Убирает блок за пределы экрана*/
+    top: 0;
+}
+
+.checkbox input:checked + span i,
+.radio input:checked + span i {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.checkbox span,
+.radio span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #00a4ff;
+    border-radius: 3px;
+    color: #006fad;
+    vertical-align: top;
+    margin-top: 1px;
+    margin-right: 4px;
+}
+
+.radio span {
+    border-radius: 100%;
+    position: relative;
+}
+
+.checkbox span i {
+    position: relative;
+    left: 0px;
+    top: -4px;
+    transform: scale(1.5);
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.radio span i {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 100%;
+    background: #006fad;
+    transform: scale(2.5);
+    opacity: 0;
+    transition: all 0.25s ease;
+}

@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Forms Lesson 8</title>
+    <title>Forms with custom style</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style_forms.css"> </head>
+    <link rel="stylesheet" href="css/style_forms.css">
+    <link rel="stylesheet" href="css/custom_style.css"> </head>
 
 <body>
     <form action="https://weblaboratory.in.ua/mail/index.php" enctype="multipart/form-data" method="post">
@@ -48,35 +49,36 @@
                     <option value="97-102">97-102</option>
                 </select>
             </div>
-            <fieldset class="">
-                <h2>Укажите ваш пол</h2>
-                <label for="sex-man" class="inline">
-                    <input type="radio" name="sex" id="sex-man" value="man" class="custom-radio" checked> Мужской </label>
-                <label for="sex-woman" class="inline">
-                    <input type="radio" name="sex" id="sex-woman" value="woman" class="custom-radio"> Женский</label>
+            <fieldset>
+                <h3>Укажите ваш пол:</h3>
+                <label for="sex-man" class="inline-block radio">
+                    <input type="radio" name="sex" id="sex-man" value="man" checked><span><i></i></span> Мужской </label>
+                <label for="sex-woman" class="inline-block radio">
+                    <input type="radio" name="sex" id="sex-woman" value="woman"><span><i></i></span> Женский</label>
             </fieldset>
             <div class="form-element">
-                <fieldset class="checkbox-line">
-                    <h2>Какие сезоны года вам нравятся?</h2>
+                <fieldset class="inline-block">
+                    <h3>Какие сезоны года вам нравятся?</h3>
                     <div class="form-element">
-                        <label for="winter"> <span>Зима</span>
-                            <input type="checkbox" name="favorite_season1" id="winter" value="Зима"> </label>
+                        <label for="winter" class="checkbox">
+                            <input type="checkbox" name="favorite_season1" id="winter" value="Зима"><span><i class="fa fa-check" aria-hidden="true"></i></span> Зима </label>
                     </div>
                     <div class="form-element">
-                        <label for="spring"> <span>Весна</span>
-                            <input type="checkbox" name="favorite_season2" id="spring" value="Весна"> </label>
+                        <label for="spring" class="checkbox">
+                            <input type="checkbox" name="favorite_season2" id="spring" value="Весна"><span><i class="fa fa-check" aria-hidden="true"></i></span> Весна </label>
                     </div>
                     <div class="form-element">
-                        <label for="summer"> <span>Лето</span>
-                            <input type="checkbox" name="favorite_season3" id="summer" value="Лето"> </label>
+                        <label for="summer" class="checkbox">
+                            <input type="checkbox" name="favorite_season3" id="summer" value="Лето"><span><i class="fa fa-check" aria-hidden="true"></i></span> Лето </label>
                     </div>
                     <div class="form-element">
-                        <label for="autumn"> <span>Осень</span>
-                            <input type="checkbox" name="favorite_season4" id="autumn" value="Осень"> </label>
+                        <label for="autumn" class="checkbox">
+                            <input type="checkbox" name="favorite_season4" id="autumn" value="Осень"><span><i class="fa fa-check" aria-hidden="true"></i></span> Осень </label>
                     </div>
                 </fieldset>
             </div>
             <div class="form-element">
+                <h3>Напишите ваш комментарий:</h3>
                 <textarea name="hobby" id="hobby" cols="30" rows="10" placeholder="Напишите пожалуйста здесь пару строк о вашем хобби:"></textarea>
             </div>
             <div class="form-element">
@@ -92,6 +94,7 @@
                 <input type="file" id="download-file"> </div>
         </fieldset>
     </form>
+    <script src="https://use.fontawesome.com/129c100fbd.js"></script>
 </body>
 
 </html>
