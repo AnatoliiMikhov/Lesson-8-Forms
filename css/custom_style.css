@@ -19,7 +19,7 @@ input:hover {
 
 input:focus {
     background: #defac6;
-    color: #fff;
+    color: #000000;
     box-shadow: 2px 2px #ccc;
 }
 
