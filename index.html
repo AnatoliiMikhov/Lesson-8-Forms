@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style_forms.css"> </head>
 
 <body>
-    <form action="https://weblaboratory.in.ua/mail/index.php" method="post">
+    <form action="https://weblaboratory.in.ua/mail/index.php" enctype="multipart/form-data" method="post">
         <fieldset>
             <legend>Мы хотим вас спросить</legend>
             <div class="form-element">
@@ -24,20 +24,21 @@
                 <label for="passField">Введите пароль:</label>
                 <input type="password" name="passField" id="passField" value="" placeholder="Не менее 12 символов" required> </div>
             <div class="element-form">
-                <label>Телефон</label>
+                <label>Телефон:</label>
                 <input type="tel" name="phone" placeholder="+38XXXXXXXXXX"> </div>
             <div class="form-element">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="exemple@domen.com"> </div>
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="exemple@domain.com"> </div>
             <div class="form-element">
-                <label for="age">Выберите ваш возраст:</label>
+                <label for="age"></label>
                 <select name="age" id="age">
+                    <option value="0">выберите ваш возраст:</option>
                     <option value="6-12">6-12 лет</option>
                     <option value="12-18">12-18 лет</option>
                     <option value="18-25">18-27 лет</option>
                     <option value="25-32">25-32</option>
                     <option value="32-38">32-38</option>
-                    <option value="38-43" selected>38-43</option>
+                    <option value="38-43">38-43</option>
                     <option value="43-59">43-59</option>
                     <option value="59-63">59-63</option>
                     <option value="63-69">63-69</option>
@@ -47,38 +48,48 @@
                     <option value="97-102">97-102</option>
                 </select>
             </div>
+            <fieldset class="">
+                <h2>Укажите ваш пол</h2>
+                <label for="sex-man" class="inline">
+                    <input type="radio" name="sex" id="sex-man" value="man" class="custom-radio" checked> Мужской </label>
+                <label for="sex-woman" class="inline">
+                    <input type="radio" name="sex" id="sex-woman" value="woman" class="custom-radio"> Женский</label>
+            </fieldset>
             <div class="form-element">
-                <label for="sex-man" class="inline-line">Мужской</label>
-                <input type="radio" name="sex" id="sex-man" value="man" checked>
-                <label for="sex-woman" class="inline-line">Женский</label>
-                <input type="radio" name="sex" id="sex-woman" value="woman"> </div>
-            <div class="form-element">
-                <h2>Какие сезоны года вам нравятся?</h2>
-                <div class="form-element inline-line">
-                    <label for="winter" class="inline-line">Зима</label>
-                    <input type="checkbox" name="winter" id="winter"> </div>
-                <div class="form-element inline-line">
-                    <label for="spring" class="inline-line">Весна</label>
-                    <input type="checkbox" name="spring" id="spring"> </div>
-                <div class="form-element inline-line">
-                    <label for="summer" class="inline-line">Лето</label>
-                    <input type="checkbox" name="summer" id="summer"> </div>
-                <div class="form-element inline-line">
-                    <label for="autumn" class="inline-line">Осень</label>
-                    <input type="checkbox" name="autumn" id="autumn"> </div>
+                <fieldset class="checkbox-line">
+                    <h2>Какие сезоны года вам нравятся?</h2>
+                    <div class="form-element">
+                        <label for="winter"> <span>Зима</span>
+                            <input type="checkbox" name="favorite_season1" id="winter" value="Зима"> </label>
+                    </div>
+                    <div class="form-element">
+                        <label for="spring"> <span>Весна</span>
+                            <input type="checkbox" name="favorite_season2" id="spring" value="Весна"> </label>
+                    </div>
+                    <div class="form-element">
+                        <label for="summer"> <span>Лето</span>
+                            <input type="checkbox" name="favorite_season3" id="summer" value="Лето"> </label>
+                    </div>
+                    <div class="form-element">
+                        <label for="autumn"> <span>Осень</span>
+                            <input type="checkbox" name="favorite_season4" id="autumn" value="Осень"> </label>
+                    </div>
+                </fieldset>
             </div>
-            
             <div class="form-element">
                 <textarea name="hobby" id="hobby" cols="30" rows="10" placeholder="Напишите пожалуйста здесь пару строк о вашем хобби:"></textarea>
             </div>
             <div class="form-element">
                 <label for="submit">
-                    <input type="submit" id="submit" value="Отправить введенные данные">
-                </label>
+                    <input type="submit" id="submit" value="Отправить введенные данные"> </label>
                 <label for="reset">
-                    <input type="reset" id="reset" value="Очистить поля формы">
-                </label>
+                    <input type="reset" id="reset" value="Очистить поля формы"> </label>
             </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-element">
+                <label for="download-file"></label>
+                <input type="file" id="download-file"> </div>
         </fieldset>
     </form>
 </body>
