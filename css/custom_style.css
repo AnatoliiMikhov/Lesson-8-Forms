@@ -1,6 +1,7 @@
 /*Custom style for form element*/
 fieldset {
     border: none;
+    border: 5px solid rgb(198, 200, 204);
 }
 
 
